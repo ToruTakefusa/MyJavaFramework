@@ -8,9 +8,9 @@ import javax.inject.Inject;
 
 public class Context {
     @SuppressWarnings("rawtypes")
-static Map<String, Class> types = new HashMap<>();
+    static Map<String, Class> types = new HashMap<>();
 
-static Map<String, Object> beans = new ConcurrentHashMap<>();
+    static Map<String, Object> beans = new ConcurrentHashMap<>();
 
     @SuppressWarnings("rawtypes")
     static void register(String name, Class type) {
@@ -24,7 +24,8 @@ static Map<String, Object> beans = new ConcurrentHashMap<>();
             Objects.requireNonNull(type, name + " not found.");
             try {
                 return createObject(type);
-            } catch (InstantiationException | IllegalAccessException | NoSuchMethodException | InvocationTargetException ex) {
+            } catch (InstantiationException | IllegalAccessException | NoSuchMethodException |
+                     InvocationTargetException ex) {
                 throw new RuntimeException(name + " can not instanciate", ex);
             }
         });
