@@ -1,6 +1,11 @@
+import javax.inject.Inject;
+
 public class Bar {
+
+    @Inject
+    Foo foo;
+
     void showMessage() {
-        Foo foo = (Foo) Context.getBean("foo");
         System.out.println(foo.getMessage());
     }
 }
