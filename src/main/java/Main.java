@@ -1,7 +1,6 @@
 public class Main {
-    public static void main(String[] args){
-        Context.register("foo", Foo.class);
-        Context.register("bar", Bar.class);
+    public static void main(String[] args) {
+        Context.autoRegister();
 
         Bar bar = (Bar) Context.getBean("bar");
         bar.showMessage();
