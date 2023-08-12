@@ -7,7 +7,8 @@ public class Bar {
     @Inject
     Foo foo;
 
+    @InvokeLog
     void showMessage() {
-        System.out.println(foo.getMessage());
+        System.out.println( foo.getName() + foo.getMessage());
     }
 }

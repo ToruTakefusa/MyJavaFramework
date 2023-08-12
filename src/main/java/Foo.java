@@ -5,4 +5,9 @@ public class Foo {
     String getMessage() {
         return "Foo";
     }
+
+    @InvokeLog
+    String getName() {
+        return "foo!";
+    }
 }
