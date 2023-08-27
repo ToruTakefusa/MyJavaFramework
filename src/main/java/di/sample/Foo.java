@@ -1,9 +1,12 @@
+package di.sample;
+
 import javax.inject.Named;
+import di.annotation.InvokeLog;
 
 @Named
 public class Foo {
     String getMessage() {
-        return "Foo";
+        return "sample.Foo";
     }
 
     @InvokeLog
